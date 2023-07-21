@@ -4,17 +4,17 @@
 
 #frontend
 ./frontend/node_modules/
-frontend/.pnp
-frontend/.pnp.js
-frontend/package-lock.json
+./frontend/.pnp
+./frontend/.pnp.js
+./frontend/package-lock.json
 # testing
-frontend/coverage
+./frontend/coverage
 
 # production
-frontend/build
+./frontend/build
 
 # misc
-frontend/.DS_Store
+./frontend/.DS_Store
 .env.local
 .env.development.local
 .env.test.local

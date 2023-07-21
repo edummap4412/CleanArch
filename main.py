@@ -1,8 +1,9 @@
 from fastapi import FastAPI, APIRouter, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from schemas import CadastroSchema
 from config import SessionLocal
 from sqlalchemy.orm import Session
+from schemas import CadastroSchema
+
 import crud
 
 app = FastAPI()
@@ -31,6 +32,7 @@ async def Home():
 
 @router.post('/registro')
 async def create(request: CadastroSchema, db: Session = Depends(get_db)):
+    """ Cadastra um usuário no banco de dados"""
     crud.create_user(db, request)
     return {'data': "CRIADO COM SUCESSO"}
 
