@@ -24,4 +24,3 @@ class Response(Generic[T]):
     status: str
     message: str
     result: Optional[T] = ''
-    
